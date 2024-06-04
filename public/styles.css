@@ -1,0 +1,97 @@
+/* body {
+    background-color: #121212;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #1f1f1f;
+    padding: 1rem;
+}
+
+nav a {
+    color: #ffffff;
+    margin: 0 1rem;
+    text-decoration: none;
+}
+
+form {
+    margin: 2rem 0;
+}
+
+input, button {
+    padding: 0.5rem;
+    margin: 0.5rem 0;
+}
+
+button {
+    background-color: #6200ea;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #3700b3;
+} */
+
+
+/* Global Styles */
+body {
+    background-color: #121212;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Styles */
+header {
+    background-color: #1f1f1f;
+    padding: 1rem;
+    text-align: center;
+}
+
+/* Navigation Styles */
+nav {
+    text-align: center;
+}
+
+nav a {
+    color: #ffffff;
+    margin: 0 1rem;
+    text-decoration: none;
+}
+
+/* Form Styles */
+form {
+    margin: 2rem auto;
+    max-width: 400px;
+    padding: 1.5rem;
+    border-radius: 8px;
+    background-color: #272727;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow effect */
+}
+
+/* Input and Button Styles */
+input, button {
+    padding: 0.7rem;
+    margin: 0.7rem 0;
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 6px;
+    background-color: #3a3a3a; /* Darker background */
+    color: #ffffff;
+}
+
+button {
+    background-color: #6200ea;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #3700b3;
+}

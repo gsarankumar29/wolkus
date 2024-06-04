@@ -1,0 +1,96 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/signout">Sign Out</a>
+        </nav>
+    </header>
+    <main>
+        <h1>Welcome, <%= user.username %>!</h1>
+        <form id="search-form">
+            <input type="text" id="search-query" placeholder="Search for movies">
+            <button type="submit">Search</button>
+        </form>
+        <div id="search-results"></div>
+        <h2>Your Watchlist</h2>
+        <ul id="watchlist">
+            <% user.watchlist.forEach(function(movieID) { %>
+                <li><%= movieID %></li>
+            <% }); %>
+        </ul>
+    </main>
+    <script src="/scripts.js"></script>
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/signout">Sign Out</a>
+        </nav>
+    </header>
+    <main>
+        <h1>Welcome, <%= user.username %>!</h1>
+        <form id="search-form">
+            <input type="text" id="search-query" placeholder="Search for movies">
+            <button type="submit">Search</button>
+        </form>
+        <div id="search-results"></div>
+        <h2>Your Watchlist</h2>
+        <!-- <ul id="watchlist">
+            <% user.watchlist.forEach(function(movieID) { %>
+                <li>
+                    <%= movieID %>
+                    <button onclick="deleteMovie('<%= movieID %>')">Delete</button>
+                </li>
+            <% }); %>
+        </ul> -->
+        <ul id="watchlist">
+            <% user.watchlist.forEach(function(movieID) { %>
+                <li>
+                    <%= movieID %>
+                    <button class="delete-btn" data-movie-id="<%= movieID %>">Delete</button>
+                </li>
+            <% }); %>
+        </ul>
+    </main>
+    <script src="/scripts.js"></script>
+    <script>
+        // Function to delete movie from watchlist
+        async function deleteMovie(movieId) {
+    try {
+        const response = await fetch(`/watchlist/${movieId}`, {
+            method: 'DELETE'
+        });
+        if (response.ok) {
+            // Reload the page to reflect changes
+            location.reload();
+        } else {
+            console.error('Failed to delete movie');
+        }
+    } catch (error) {
+        console.error('Error deleting movie:', error);
+    }
+}
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+{
+  "name": "movie_watchlist_app",
+  "version": "1.0.0",
+  "description": "A web application to search and manage a movie watchlist",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "axios": "^0.27.2",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.6",
+    "ejs": "^3.1.6",
+    "express": "^4.17.3",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.3.0"
+  },
+  "author": "",
+  "license": "ISC"
+}
